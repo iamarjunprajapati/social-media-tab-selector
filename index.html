@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social media selector</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="w-full h-[100vh]  bg-gradient-to-tl to-pink-600 from-yellow-600 flex items-center justify-center">
+        <div class="sm:w-[30%] p-4 w-full min-h-[400px] flex justify-center items-center flex-col">
+            <div
+                class="select overflow-hidden sm:w-[200px] w-full bg-[rgba(255,192,203,0.18)] mb-10 flex justify-between text-white p-2 rounded">
+                <div id="select-option">Select tab</div>
+                <i class="ri-arrow-down-s-line transition-all ease" id="dropdown-icon"></i>
+            </div>
+            <div class="dropdown w-full sm:w-[200px] rounded overflow-hidden p-1 bg-[rgba(255,192,203,0.18)] invisible">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

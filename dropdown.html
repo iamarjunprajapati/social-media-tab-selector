@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom-dropdown {
+            position: relative;
+            width: 200px;
+        }
+
+        .dropdown-toggle {
+            width: 100%;
+            padding: 10px;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            border: 1px solid #ccc;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-menu li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .dropdown-menu li:hover {
+            background: #f0f0f0;
+        }
+
+        .dropdown-menu i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="custom-dropdown">
+        <button class="dropdown-toggle">Select an Option</button>
+        <ul class="dropdown-menu">
+            <li><i class="fa fa-user"></i> Option 1</li>
+            <li><i class="fa fa-cog"></i> Option 2</li>
+            <li><i class="fa fa-home"></i> Option 3</li>
+        </ul>
+    </div>
+
+
+
+    <script>
+        const toggle = document.querySelector('.dropdown-toggle');
+        const menu = document.querySelector('.dropdown-menu');
+
+        toggle.addEventListener('click', () => {
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!toggle.contains(e.target) && !menu.contains(e.target)) {
+                menu.style.display = 'none';
+            }
+        });
+
+    </script>
+</body>
+
+</html>
